@@ -1,0 +1,131 @@
+{
+  "timestamp": "2025-12-01T16:13:56.291174",
+  "task": "forecasting",
+  "prediction_type": "1_hour_ahead_classification",
+  "dataset": "azure_public_dataset_v1",
+  "file": "azure_data/raw/vm_cpu_readings-file-46-of-125.csv.gz",
+  "idle_threshold": 5.0,
+  "max_vms": 200,
+  "sample_fraction": 0.5,
+  "lookback_timesteps": 12,
+  "prediction_horizon": 12,
+  "forecast_time": "60 minutes",
+  "total_sequences": 2409,
+  "metrics": [
+    {
+      "model_name": "simple_gru",
+      "optimal_threshold": 0.56,
+      "accuracy": 0.9116022099447514,
+      "auc": 0.9588596873336237,
+      "f1_macro": 0.8667648141332351,
+      "f1_idle": 0.9440559440559441,
+      "f1_active": 0.7894736842105263,
+      "precision_idle": 0.9608540925266904,
+      "precision_active": 0.7407407407407407,
+      "recall_idle": 0.9278350515463918,
+      "recall_active": 0.8450704225352113,
+      "confusion_matrix": [
+        [
+          270,
+          21
+        ],
+        [
+          11,
+          60
+        ]
+      ]
+    },
+    {
+      "model_name": "bigru",
+      "optimal_threshold": 0.56,
+      "accuracy": 0.9337016574585635,
+      "auc": 0.9663133439814142,
+      "f1_macro": 0.9045736127586661,
+      "f1_idle": 0.9572953736654805,
+      "f1_active": 0.8518518518518519,
+      "precision_idle": 0.992619926199262,
+      "precision_active": 0.7582417582417582,
+      "recall_idle": 0.9243986254295533,
+      "recall_active": 0.971830985915493,
+      "confusion_matrix": [
+        [
+          269,
+          22
+        ],
+        [
+          2,
+          69
+        ]
+      ]
+    },
+    {
+      "model_name": "gru_attention",
+      "optimal_threshold": 0.5800000000000001,
+      "accuracy": 0.93646408839779,
+      "auc": 0.9658777406708291,
+      "f1_macro": 0.9089487440263333,
+      "f1_idle": 0.9590017825311943,
+      "f1_active": 0.8588957055214724,
+      "precision_idle": 0.9962962962962963,
+      "precision_active": 0.7608695652173914,
+      "recall_idle": 0.9243986254295533,
+      "recall_active": 0.9859154929577465,
+      "confusion_matrix": [
+        [
+          269,
+          22
+        ],
+        [
+          1,
+          70
+        ]
+      ]
+    },
+    {
+      "model_name": "cnn_gru",
+      "optimal_threshold": 0.4800000000000001,
+      "accuracy": 0.9337016574585635,
+      "auc": 0.9695077682590387,
+      "f1_macro": 0.9045736127586661,
+      "f1_idle": 0.9572953736654805,
+      "f1_active": 0.8518518518518519,
+      "precision_idle": 0.992619926199262,
+      "precision_active": 0.7582417582417582,
+      "recall_idle": 0.9243986254295533,
+      "recall_active": 0.971830985915493,
+      "confusion_matrix": [
+        [
+          269,
+          22
+        ],
+        [
+          2,
+          69
+        ]
+      ]
+    },
+    {
+      "model_name": "cnn_gru_attention",
+      "optimal_threshold": 0.44000000000000006,
+      "accuracy": 0.9281767955801105,
+      "auc": 0.9620541116112482,
+      "f1_macro": 0.8975174216027875,
+      "f1_idle": 0.9535714285714286,
+      "f1_active": 0.8414634146341463,
+      "precision_idle": 0.9925650557620818,
+      "precision_active": 0.7419354838709677,
+      "recall_idle": 0.9175257731958762,
+      "recall_active": 0.971830985915493,
+      "confusion_matrix": [
+        [
+          267,
+          24
+        ],
+        [
+          2,
+          69
+        ]
+      ]
+    }
+  ]
+}
